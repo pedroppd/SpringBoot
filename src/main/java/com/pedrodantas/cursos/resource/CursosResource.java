@@ -16,7 +16,7 @@ public class CursosResource {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<Course>> findAll() {
-		Course c = new Course(1, "JAVA FOR BEGINNERS", "Here u learn how programmer in java ", 200.0);
+		Course c = new Course(1, "523", "Here u learn how programmer in java ", 200.0);
 		List<Course> courses = new ArrayList<>();
 		courses.add(c);
 		return ResponseEntity.ok().body(courses);
