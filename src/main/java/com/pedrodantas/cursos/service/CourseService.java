@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.pedrodantas.cursos.domain.Course;
+import com.pedrodantas.cursos.repository.CourseRepository;
 import com.pedrodantas.cursos.service.exception.ObjectNotFoundException;
 
-/*
+
 @Service
 public class CourseService {
 
@@ -35,11 +36,11 @@ public class CourseService {
 		cp.deleteById(id);
 	}
 
-	public void update(Course obj) {
+	public Course update(Course obj) {
 		Course newObj = new Course();
 		newObj.setId(obj.getId());
 		updateData(newObj, obj);
-		cp.save(newObj);
+		return cp.save(newObj);
 	}
 
 	public void updateData(Course newObj, Course obj) {
@@ -50,4 +51,3 @@ public class CourseService {
 	}
 
 }
-*/

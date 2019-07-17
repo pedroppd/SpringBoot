@@ -19,8 +19,8 @@ public class Client implements Serializable{
 	private Integer id;
 	
 	private String name;
-	
-	private Double CPF;
+
+	private String CPF;
 	
 	@ManyToMany(mappedBy="clients")
 	private List<Course> courses = new ArrayList<>();
@@ -29,10 +29,10 @@ public class Client implements Serializable{
 		
 	}
 
-	public Client(Integer id, String name, Double cPF) {
+	public Client(Integer id, String name, String CPF) {
 		this.id = id;
 		this.name = name;
-		this.CPF = cPF;
+		this.CPF = CPF;
 	}
 
 	public Integer getId() {
@@ -51,11 +51,11 @@ public class Client implements Serializable{
 		this.name = name;
 	}
 
-	public Double getCPF() {
+	public String getCPF() {
 		return CPF;
 	}
 
-	public void setCPF(Double cPF) {
+	public void setCPF(String cPF) {
 		CPF = cPF;
 	}
 
