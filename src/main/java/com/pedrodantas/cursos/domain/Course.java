@@ -4,10 +4,22 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
 public class Course implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 
 	private String name;
@@ -16,6 +28,12 @@ public class Course implements Serializable {
 
 	private Double price;
 	
+	@JsonIgnore
+	@ManyToMany
+	@JoinTable(name = "COURSE_CLIENT",
+		joinColumns = @JoinColumn(name = "course_id"),
+		inverseJoinColumns = @JoinColumn(name = "client_id")
+	)
 	private List<Client> clients = new ArrayList<>();
 	
 	public Course() {
@@ -23,7 +41,6 @@ public class Course implements Serializable {
 	}
 
 	public Course(Integer id, String name, String description, Double price) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;

@@ -2,16 +2,13 @@ package com.pedrodantas.cursos.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Supplier;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.pedrodantas.cursos.domain.Course;
-import com.pedrodantas.cursos.repository.CourseRepository;
 import com.pedrodantas.cursos.service.exception.ObjectNotFoundException;
 
-
+/*
 @Service
 public class CourseService {
 
@@ -53,3 +50,4 @@ public class CourseService {
 	}
 
 }
+*/

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pedrodantas.cursos.domain.Course;
-
+/*
 @RestController
 @RequestMapping(value = "/cursos")
 public class CursosResource {
@@ -23,3 +23,4 @@ public class CursosResource {
 	}
 
 }
+*/
