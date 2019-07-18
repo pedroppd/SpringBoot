@@ -17,8 +17,6 @@ public class CursosApplication implements CommandLineRunner {
 		SpringApplication.run(CursosApplication.class, args);
 	}
 
-	
-	
 	@Override
 	public void run(String... args) throws Exception {
      service.instantiateDataBase();
